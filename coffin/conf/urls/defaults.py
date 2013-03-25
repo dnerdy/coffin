@@ -1,4 +1,5 @@
-from django.conf.urls.defaults import *
+import warnings
+warnings.warn("coffin.conf.urls.defaults is deprecated; use coffin.conf.urls instead",
+              DeprecationWarning)
 
-handler404 = 'coffin.views.defaults.page_not_found'
-handler500 = 'coffin.views.defaults.server_error'
+from coffin.conf.urls import *
